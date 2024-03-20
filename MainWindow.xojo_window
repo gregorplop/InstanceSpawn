@@ -680,6 +680,8 @@ End
 		  row = Me.RowFromXY(System.MouseX - Me.Left - Me.Window.Left, System.MouseY - Me.Top - Me.Window.Top)
 		  column = Me.ColumnFromXY(System.MouseX - Me.Left - Me.Window.Left, System.MouseY - Me.Top - Me.Window.Top)
 		  
+		  if row < 0 or column < 0 then Return 
+		  
 		  MessageBox me.CellTextAt(row , column)
 		End Sub
 	#tag EndEvent
